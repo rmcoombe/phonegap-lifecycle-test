@@ -7,9 +7,9 @@ document.addEventListener("deviceready", onDeviceReady, false);
 		
 	
 function updateDisplay() {
-	//$("#launched").text("Application launched: " + launched_count);
-	//$("#resumed").text("Application paused: " + paused_count);
-	//$("#paused").text("Application resumed: " + resumed_count);
+	$("#launched").text("Application launched: " + launched_count);
+	$("#resumed").text("Application paused: " + paused_count);
+	$("#paused").text("Application resumed: " + resumed_count);
 	//document.getElementById ("launched").innerHTML =  ("Application launched: " + launched_count);
 	//document.getElementById ("resumed").innerHTML =  ("Application launched: " + resumed_count);
 	//document.getElementById ("paused").innerHTML =  ("Application launched: " + paused_count);
