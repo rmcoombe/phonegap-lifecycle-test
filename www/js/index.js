@@ -10,13 +10,16 @@ function updateDisplay() {
 	$("#launched").text("Application launched: " + launched_count);
 	$("#resumed").text("Application paused: " + paused_count);
 	$("#paused").text("Application resumed: " + resumed_count);
+	$("#test").text("Test Text");
 }
 
 
 // device APIs are available
 
     function onDeviceReady() {
-	// Event listeners - Adding event listeners for resume and pause and the appropriate function for the event
+	/* Event listeners - Adding event listeners for resume and pause and the appropriate 
+	function for the event*/
+	
 	document.addEventListener("resume", onResume, false);
 	document.addEventListener("pause", onPause, false);
 	
