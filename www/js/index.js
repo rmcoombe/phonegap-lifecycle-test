@@ -2,6 +2,7 @@ var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
 
+// Event listener - Adding an event listener for device ready, function to run on event. 
 document.addEventListener("deviceready", onDeviceReady, false);
 		
 	
@@ -13,9 +14,9 @@ function updateDisplay() {
 
 
 // device APIs are available
-//
+
     function onDeviceReady() {
-	
+	// Event listeners - Adding event listeners for resume and pause and the appropriate function for the event
 	document.addEventListener("resume", onResume, false);
 	document.addEventListener("pause", onPause, false);
 	
