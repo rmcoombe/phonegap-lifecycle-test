@@ -10,9 +10,9 @@ function updateDisplay() {
 	//$("#launched").text("Application launched: " + launched_count);
 	//$("#resumed").text("Application paused: " + paused_count);
 	//$("#paused").text("Application resumed: " + resumed_count);
-	document.getElementById ("launched").innerHTML =  ("Application launched: " + launched_count);
-	document.getElementById ("resumed").innerHTML =  ("Application launched: " + resumed_count);
-	document.getElementById ("paused").innerHTML =  ("Application launched: " + paused_count);
+	//document.getElementById ("launched").innerHTML =  ("Application launched: " + launched_count);
+	//document.getElementById ("resumed").innerHTML =  ("Application launched: " + resumed_count);
+	//document.getElementById ("paused").innerHTML =  ("Application launched: " + paused_count);
 }
 
 
@@ -28,7 +28,7 @@ function updateDisplay() {
 	launched_count++;
 	updateDisplay();
 	    
-	alert("device ready");
+	console.log("Device Ready");
     }
 
 
@@ -37,7 +37,7 @@ function updateDisplay() {
 	paused_count++;
 	updateDisplay();
 	    
-	alert("pause");
+	console.log("Paused");
     }
 	
 
@@ -46,5 +46,5 @@ function updateDisplay() {
 	resumed_count++;
 	updateDisplay();
 	    
-	alert("resume");
+	console.log("Resumed");
     }
