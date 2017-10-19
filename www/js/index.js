@@ -1,44 +1,43 @@
-
-window.localStorage.setItem("phone", "pixelXL" );
-window.localStorage.setItem( "ID", "Student" );
-window.localStorage.setItem( "card", "lloyds" );
-window.localStorage.setItem( "pen", "blue" );
-window.localStorage.setItem( "pad", "ruled" );
-
-
-function showItem1(){
-	
-	var value = window.localStorage.getItem("phone");
-	alert (value);
-}
-	
-function showItem2(){
-	
-	var value = window.localStorage.getItem("ID");
-	alert (value);
-}
-	
-	function showItem3(){
-	
-	var value = window.localStorage.getItem("card");
-	alert (value);
-}
-	
-	function showItem4(){
-	
-	var value = window.localStorage.getItem("pen");
-	alert (value);
-}
-	
-	function showItem5(){
-	
-	var value = window.localStorage.getItem("pad");
-	alert (value);
+var chocbar ={
+	"name": "Wispa",
+	"Calories" : "215",
+	"Fat" : "13.3g",
+	"Saturates" : "8.2g",
+	"Sugars" : "20.5g",
+	"Salt" : "0.09g"
 }
 
-	function countItems(){
-		var value = window.localStorage.length;
-		alert ("You have " + value + " items");
+var	chocbarString = JSON.stringify(chocbar);
+
+window.localStorage.setItem("chocbar", chocbarString);
+
+var getchocbar = window.localStorage.getItem("chocbar");
+
+var detailJSON = JSON.parse(getchocbar);
+
+
+function calories(){
 	
-	}
+	alert ("The Calories in a " + chocbar.name + " are " + chocbar.Calories);
+
+}
+function fat(){
 	
+	alert ("The fat in a " + chocbar.name + " is " + chocbar.Fat);
+
+}
+function saturates(){
+	
+	alert ("The saturates in a " + chocbar.name + " are " + chocbar.Saturates);
+
+}
+function sugars(){
+	
+	alert ("The suagrs in a " + chocbar.name + " are " + chocbar.Sugars);
+
+}
+function salt(){
+	
+	alert ("The salt in a " + chocbar.name + " are " + chocbar.Salt);
+
+}
