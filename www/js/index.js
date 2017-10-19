@@ -25,7 +25,11 @@ var value = “Ruled”;
 window.localStorage.setItem( key, value );
 
 
-
+function showItem1(){
+	var key = "phone";
+	var value = window.localStorage.getItem(key);
+	alert (value)
+}
 	
 	
 	
