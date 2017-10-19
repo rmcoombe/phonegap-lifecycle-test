@@ -1,50 +1,32 @@
-var paused_count =0;
-var resumed_count = 0;
-var launched_count = 0;
 
-// Event listener - Adding an event listener for device ready, function to run on event. 
-document.addEventListener("deviceready", onDeviceReady, false);
-		
+var key = “phone”;
+var value = “PixelXL”;
+
+window.localStorage.setItem( key, value );
+
+var key = “ID”;
+var value = “Student”;
+
+window.localStorage.setItem( key, value );
+
+var key = “card”;
+var value = "Lloyds”;
+
+window.localStorage.setItem( key, value );
+
+var key = “pen”;
+var value = “blue”;
+
+window.localStorage.setItem( key, value );
+
+var key = “pad”;
+var value = “Ruled”;
+
+window.localStorage.setItem( key, value );
+
+
+
 	
-function updateDisplay() {
-	$("#launched").text("Application launched: " + launched_count);
-	$("#resumed").text("Application paused: " + paused_count);
-	$("#paused").text("Application resumed: " + resumed_count);
-	//document.getElementById ("launched").innerHTML =  ("Application launched: " + launched_count);
-	//document.getElementById ("resumed").innerHTML =  ("Application launched: " + resumed_count);
-	//document.getElementById ("paused").innerHTML =  ("Application launched: " + paused_count);
-}
-
-
-// device APIs are available
-
-    function onDeviceReady() {
-	/* Event listeners - Adding event listeners for resume and pause and the appropriate 
-	function for the event*/
 	
-	document.addEventListener("resume", onResume, false);
-	document.addEventListener("pause", onPause, false);
 	
-	launched_count++;
-	updateDisplay();
-	    
-	console.log("Device Ready");
-    }
-
-
-    function onPause() {
 	
-	paused_count++;
-	updateDisplay();
-	    
-	console.log("Paused");
-    }
-	
-
-    function onResume() {
-		
-	resumed_count++;
-	updateDisplay();
-	    
-	console.log("Resumed");
-    }
