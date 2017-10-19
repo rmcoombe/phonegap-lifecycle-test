@@ -5,9 +5,6 @@ window.localStorage.setItem( "card", "lloyds" );
 window.localStorage.setItem( "pen", "blue" );
 window.localStorage.setItem( "pad", "ruled" );
 
-var value = window.localStorage.getItem("phone");
-
-$("#myText").text("phone");
 
 function showItem1(){
 	
@@ -41,7 +38,7 @@ function showItem2(){
 
 	function countItems(){
 		var value = window.localStorage.length;
-		alert (value);
+		alert ("You have " + value + " items");
 	
 	}
 	
