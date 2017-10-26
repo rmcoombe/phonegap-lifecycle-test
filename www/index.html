@@ -11,20 +11,16 @@
 <div data-role="page" id="pageone">
   <div data-role="panel" id="myPanel"> 
     <h2>Panel Header</h2>
-    <p>Click on the buttons below to navigate to the appropriate page</p>
-    <a href="#pageone" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Page One</a>
-	<a href="#pagetwo" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Page Two</a>
-	<a href="#pagethree" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Page Three</a>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
   </div> 
 
   <div data-role="header">
-    <h1>This is Page One</h1>
-  </div>
-	
+    <h1>Page Header</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Click on the button below to open the Panel and navigate to other pages</p>
+    <p>Click on the button below to open the Panel.</p>
     <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
   </div>
 
