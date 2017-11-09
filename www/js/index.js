@@ -11,5 +11,5 @@ function submitText() {
 }
 
 function storeValue(key, value) {
-	//add some code to store the key-value pair in persistant storage 
+	window.localStorage.setItem(item,text)
 }
