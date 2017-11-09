@@ -15,5 +15,6 @@ function storeValue(key, value) {
 }
 
 function showValue(key, value) {
-	
+	window.localStorage.setItem(item,text)
+	document.getElementById(text).innerHTML=text;
 }
