@@ -13,3 +13,7 @@ function submitText() {
 function storeValue(key, value) {
 	window.localStorage.setItem(item,text)
 }
+
+function showValue(key, value) {
+	
+}
