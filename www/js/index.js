@@ -10,11 +10,13 @@ function submitText() {
 	alert(text);
 }
 
-function storeValue(key, value) {
-	window.localStorage.setItem(item,text)
+function storeValue() {
+	var text = $('#textinput').val();
+	var setItem = window.localStorage.setItem("input",text)
+	
 }
 
-function showValue(key, value) {
-	window.localStorage.setItem(item,text)
-	document.getElementById(text).innerHTML=text;
+function showValue() {
+	var output = window.localStorage.getItem("input");
+	document.getElementById("text").innerHTML=output;
 }
