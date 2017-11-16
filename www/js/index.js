@@ -20,4 +20,6 @@ $(document).on("pagecreate","#pageone",function(){
 function random() {
 var number = !Math.round(Math.random());
 document.getElementById("output").innerHTML=number;
+if (number == true){numbernavigator.notification.beep(1);} //beep once
+else if (number ==false){numbernavigator.notification.beep(2);} //beep twice
 }
