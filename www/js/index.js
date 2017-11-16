@@ -6,7 +6,7 @@ if (number == true){
 	numbernavigator.notification.beep(1);
 	
 	} 
-else if (number == false){
+if (number == false){
 	numbernavigator.notification.beep(2);
 	} 
 }
