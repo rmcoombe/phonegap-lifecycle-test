@@ -4,11 +4,11 @@ var number = !Math.round(Math.random());
 document.getElementById("output").innerHTML=number;
 
 if (number == true){
-	navigator.notification.beep(1);
+	navigator.vibrate([200, 300, 200]);
 	
 	} 
 if (number == false){
-	navigator.notification.beep(2);
+	navigator.vibrate([400, 300, 400]);
 	} 
 }
 
