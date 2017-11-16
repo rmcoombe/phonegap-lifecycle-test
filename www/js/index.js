@@ -22,7 +22,7 @@ var answers = [
 
 ];
 
-var onShake = function(){
+var onShake = question(){
 alert(randomAnswer());
 }
 
