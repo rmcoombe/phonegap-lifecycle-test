@@ -1,19 +1,39 @@
+var answers = [
+  "Yes!",
+  "No!",
+  "Maybe",
+  "Possibly",
+  "Doubtful",
+  "Looks likely",
+  "Doesn't look good",
+  "Absolulutely",
+  "Negative",
+  "Ask again later",
+  "Unsure",
+  "Without a doubt",
+  "Nope",
+  "Yep",
+  "No one knows",
+  "Guaranteed",
+  "Don't even think about it",
+  "Looks Unlikely",
+  "Definitely not",
+  "Hmmm, I don't know"
 
+];
+
+
+//returns a randon number between 0 - 19 inclusive
 function random() {
-var number = !Math.round(Math.random());
-document.getElementById("output").innerHTML=number;
-
-if (number == true){
-	navigator.vibrate([200, 300, 200]);
-	
-	} 
-if (number == false){
-	navigator.vibrate([400, 300, 400]);
-	} 
+  var num = Math.floor(Math.random() * 20);
+  return num;
 }
 
-/*$("#mybutton").on("click",buttonclicked);
 
-function buttonclicked (){
-	
-}*/	
+//returns a random answer from the array
+function randomAnswer() {
+  var result = answers[random()];
+  return result;
+  document.getElementById("answer").innerHTML=result;
+  
+}
