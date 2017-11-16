@@ -22,6 +22,9 @@ var answers = [
 
 ];
 
+var onShake = function(){
+alert(randomAnswer());
+}
 
 //returns a randon number between 0 - 19 inclusive
 function random() {
@@ -34,6 +37,6 @@ function random() {
 function randomAnswer() {
   var result = answers[random()];
   return result;
-  document.getElementById("answer").innerHTML=result;
   
 }
+
