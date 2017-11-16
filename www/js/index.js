@@ -16,3 +16,8 @@ $(document).on("pagecreate","#pageone",function(){
 
 
 });
+
+function random() {
+var number = !Math.round(Math.random());
+document.getElementById("output").innerHTML=number;
+}
