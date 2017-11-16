@@ -21,6 +21,7 @@ var answers = [
   "Hmmm, I don't know"
 
 ];
+shake.startWatch(onShake, 40);
 
 var onShake = question(){
 alert(randomAnswer());
