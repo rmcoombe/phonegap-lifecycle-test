@@ -54,11 +54,13 @@ function successPosition(position) {
 	var longitude = position.coords.longitude;
 	var unixtime = new Date(position.timestamp);
 	var date = unixtime.toDateString();
+	var alt =position.coords.altitude;
 	
 	//OK. Now we want to update the display with the correct values
 	$('#time').val(unixtime);
 	$('#lattext').val(latitude);
 	$('#longtext').val(longitude);
+	$('#alttext').val(alt);
 	
 }
 
