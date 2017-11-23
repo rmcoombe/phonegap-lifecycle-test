@@ -1,28 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.location1"
+    versionCode = "1"
+    version     = "1.0.0" >
 
-<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "mob.app.dev.lifecycle"
-        version   = "1.0.0">
 
-    <name>Application Lifecycle Test</name>
+  <name>Location</name>
 
-    <description>
-        A sample application that counts the occurances of lifecycle events.
-    </description>
+  <description>
+    
+  </description>
+ 
+    <!--Android 6.0 or newer: Plugin to support runtime permissions--> 
+    <plugin name="cordova-plugin-geolocation-android-activator" />
+    
+    <!--Plugin to support gathering of location data--> 
+    <plugin name="cordova-plugin-geolocation"  />
 
-    <author href="worcester.ac.uk" email="c.bowers@worc.ac.uk">
-        WBS Computing
-    </author>
-
-    <preference name="phonegap-version" value="cli-7.0.1" />
-	
-    <preference name="permissions"                value="none"/>   
-	
-	<access origin="*"/>
-   	<plugin name="cordova-plugin-whitelist" version="1" />
-	<plugin name="cordova-plugin-dialogs" />
-	<plugin name="cordova-plugin-shake" />
-	<plugin name="cordova-plugin-vibration" spec="~2.1.6" />
+    
+    <!--Apple iOS 10 or newer: Adding a parameter to the ios build to allow suer to give permission to access location-->
+    <config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" mode="merge">
+        <array>
+            <key>NSLocationWhenInUseUsageDescription</key>
+            <string>Give me your location! Let me have it!!!</string>
+        </array>
+    </config-file>
+    
 </widget>
