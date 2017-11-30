@@ -11,15 +11,8 @@ $(document).on("pagecreate", "#chartPage", function () {
 	//set uplistener for button
 	$('#addButton').on('click', function() {
 		
-		navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
-		function accelerometerSuccess(acceleration) {
-	
-		$('#sensorX').val(acceleration.x);
-		}
-
-		function accelerometerError() {
-		alert('Error');
-		}
+		navigator.accelerometer.getCurrentAcceleration
+		
 		
 		var value = acceleration.x;
 		updateChart(value);
