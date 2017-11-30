@@ -2,7 +2,6 @@ var dps = [];   //dataPoints.
 var chart;
 var startTime;
 
-
 $(document).on("pagecreate", "#chartPage", function () {
 	
 	//store start time in unixtime 
@@ -10,12 +9,9 @@ $(document).on("pagecreate", "#chartPage", function () {
 	
 	//set uplistener for button
 	$('#addButton').on('click', function() {
-		
-		navigator.accelerometer.getCurrentAcceleration
-		
-		
-		var value = acceleration.x;
-		updateChart(value);
+	
+		var randomValue = Math.random();
+		updateChart(randomValue);
 		
 	});
 	
@@ -39,10 +35,10 @@ $(document).on("pagecreate", "#chartPage", function () {
 	  
 });
 
-function updateChart(value) {
+function updateChart(random) {
       	
       	//set new random y values
-      	yVal = value;
+      	yVal = random;
 		
 		//x value is time since start 
 		xVal = Date.now() - startTime;
