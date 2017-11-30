@@ -2,6 +2,7 @@ var dps = [];   //dataPoints.
 var chart;
 var startTime;
 
+
 $(document).on("pagecreate", "#chartPage", function () {
 	
 	//store start time in unixtime 
@@ -38,7 +39,7 @@ $(document).on("pagecreate", "#chartPage", function () {
 function updateChart(random) {
       	
       	//set new random y values
-      	yVal = random;
+      	yVal = acceleratoin.x;
 		
 		//x value is time since start 
 		xVal = Date.now() - startTime;
