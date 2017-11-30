@@ -10,9 +10,19 @@ $(document).on("pagecreate", "#chartPage", function () {
 	
 	//set uplistener for button
 	$('#addButton').on('click', function() {
+		
+		navigator.accelerometer.watchAcceleration( accelerometerSuccess, accelerometerError, accelerometerOptions);
+		function accelerometerSuccess(acceleration) {
 	
-		var randomValue = Math.random();
-		updateChart(randomValue);
+		$('#sensorX').val(acceleration.x);
+		}
+
+		function accelerometerError() {
+		alert('Error');
+		}
+		
+		var value = acceleration.x;
+		updateChart(value);
 		
 	});
 	
@@ -36,10 +46,10 @@ $(document).on("pagecreate", "#chartPage", function () {
 	  
 });
 
-function updateChart(random) {
+function updateChart(value) {
       	
       	//set new random y values
-      	yVal = acceleration.x;
+      	yVal = value;
 		
 		//x value is time since start 
 		xVal = Date.now() - startTime;
