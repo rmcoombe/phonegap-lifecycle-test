@@ -56,7 +56,6 @@ function accelerometerError() {
 }
 
 function updateFreq(freq) {
-	accelerometerOptions.frequency = freq;
 }
 
 
