@@ -39,7 +39,7 @@ $(document).on("pagecreate", "#chartPage", function () {
 function updateChart(random) {
       	
       	//set new random y values
-      	yVal = acceleratoin.x;
+      	yVal = acceleration.x;
 		
 		//x value is time since start 
 		xVal = Date.now() - startTime;
