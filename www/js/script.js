@@ -142,7 +142,6 @@ function createSetPrint () {
 	
 	var printer = document.getElementById("printerList").value;
 	var printerQuotes = '"' + printer + ' series"';
-	//alert (printerQuotes);
 	var content = ':Checks that Print Spooler has started and starts it if not.\n NET Start Spooler \n:Creates a 4 second pause delay.\nPING 127.0.0.1 -n 4 -w 1000 >NUL\n:Add default printer as specified between quotations.\nRUNDLL32 PRINTUI.DLL,PrintUIEntry /y /n  ' + printerQuotes + '';
     var textFile = null,
         makeTextFile = function (text) {
@@ -202,7 +201,7 @@ function processPrinterResults(printers) {
 		
     }
 	
-	var whereClause = "DC_IP > 1";
+	var whereClause = "Name is not null";
 	var queryBuilder = Backendless.DataQueryBuilder.create().setWhereClause( whereClause );
 	queryBuilder.setPageSize( 50 );
 	queryBuilder.setSortBy ( ["Name ASC" ] );
