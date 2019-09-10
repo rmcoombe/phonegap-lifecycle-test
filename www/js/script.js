@@ -183,7 +183,7 @@ function createSetPrint () {
 
 function getDropdown() {
 	
-	var whereClause = "Model > 1";
+	var whereClause = "Model is not null";
 	var queryBuilder = Backendless.DataQueryBuilder.create().setWhereClause( whereClause );
 	queryBuilder.setPageSize( 50 );
 	queryBuilder.setSortBy ( ["Make", "Model ASC" ] );
